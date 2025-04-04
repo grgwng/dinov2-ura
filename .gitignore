@@ -1,1 +1,10 @@
 .ipynb_checkpoints/
+token.txt
+hftoken.txt
+reports/
+outputs/
+inputs/
+*.zip
+archive/
+final_reports/
+*_images/
