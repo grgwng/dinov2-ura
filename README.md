@@ -87,6 +87,8 @@ You can optionally create a scatterplot to plot color diffs against the item dep
 
 The last cell creates an animated graph of the color diffs and item depths plotted against time. The graph also shows the depth of the object smoothed with a moving average, as well as a horizontal line representing the benchmark foreign object DINOv2 color difference from the first frame. The animation is saved as `animation.gif` to be used in the output video composition.
 
+Note that you can change the item depth scaling factor so that the item depth graph is visualized better.
+
 ### 4. Create output video
 
 Now you should have the following:
@@ -104,3 +106,7 @@ Simply run the command. (Replace with your own input video and foreign object im
 ```
 
 This will create a composite output video called `result.mp4`.
+
+## Basic analysis
+
+You can see that the DINOv2 color differences trend similarly to the item. That is, when the item is further away, the DINOv2 feature differs more from the first frame. In some cases (e.g. `pasta_sauce`), this difference crosses the benchmark of foreign image. It is likely that, since the object is far away, it is only a few pixels and thus the average color can change drastically. In other cases (e.g. `duffelbag`), the object generally contains a fair amount of pixels when zoomed out, and thus the average color is relatively steady.
